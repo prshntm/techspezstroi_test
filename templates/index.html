@@ -4,22 +4,25 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet/less" type="text/css" href="/main/assets/styles/style.less">
-	<link rel="stylesheet/less" type="text/css" href="/main/assets/plugins/swiper/swiper.less"/>
+	<!--<link rel="stylesheet/less" type="text/css" href="/main/assets/plugins/swiper/swiper.less"/>-->
+	<link rel="stylesheet" href="https://unpkg.com/swiper@7.0.3/swiper.less">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css"/>
 	<script src="https://cdn.jsdelivr.net/npm/less@4.1.1"></script>
 	<script src="https://use.fontawesome.com/760f254d7c.js"></script>
+	<script src="/main/assets/js/swiper.js"></script>
+	<script src="https://unpkg.com/swiper@7.0.3/swiper-bundle.min.js"></script>
 	<title>Техспецстрой</title>
 </head>
 <body>
-	<header>
-		<nav>
-			<ul class="topmenu">
+	<header class="header">
+		<nav class="header__menu">
+			<ul class="menu">
 				<li>
 					<a href="#" class="active"><span class="fa fa-bars"></span></a>
-					<ul class="topmenu__submenu">
+					<ul class="menu__submenu">
 						<li><a href="#">О компании</a></li>
 						<li><a href="#">Услуги</a>
-							<ul class="topmenu__submenu">
+							<ul class="menu__submenu">
 								<li><a href="#">Проектирование</a></li>
 								<li><a href="#">Строительство</a></li>
 								<li><a href="#">Горизонтальное бурение</a></li>
@@ -32,22 +35,24 @@
 				</li>
 			</ul>
 		</nav>
-		<script src="/main/assets/js/myFunction.js"></script>
-		<img src="/main/logo.png" alt="logo">
+		<img src="/main/logo.png" alt="logo" class="header__logo">
 		<button id="callback">Заказать звонок</button>
-		<div id="email"><a href="#">tss.inc@yandex.ru</a></div>
-		<ul id="contact">
-			<li>
-				+7 (4212) 60-15-28
-			</li>
-			<li>
-				46-78-02
-			</li>
-		</ul>
+		<div class="contacts">
+			<a href="#">tss.inc@yandex.ru</a>
+			<ul class="contact">
+				+7 (4212)
+				<li class="contact__sub">
+					 60-15-28
+				</li>
+			</ul>
+			<p class="contact__sub">
+					46-78-02
+			</p>
+		</div>
 	</header>
 	<main>
 		<section id="swiper-gallery">
-		<div class="swiper-container">
+		<div class="swiper">
 			<div class="swiper-wrapper">
 				<div class="swiper-slide">
 					<div class="header-block"><h1>Lorem ipsum dolor sit amet, consectetur adipiscing.</h1>
@@ -62,103 +67,176 @@
 		</div>
 		<script src="/main/assets/js/swiper.js"></script>
 		</section>
-		<section id="services">
+		<div class="container">
+			<section class="services">
 			<h1>Услуги</h1>
 			<div class="services__gallery">
 				<div class="services__gallery__block thumb">
 					<a data-fancybox="gallery" data-src="/main/assets/images/project.png" rel="group" class="fancybox">
 					<img src="/main/assets/images/project.png" alt="project" class="img-fluid"></a>
+					<div class="services__gallery_description">
+						
+					<button class="arrow"><i class="fa fa-angle-right"></i></button>
+					<div class="description"><p>Проектирование</p></div>
+					</div>
 				</div>
-					<button class="arrow"><i class="fas fa-angle-right"></i></button>
-					<p>Проектирование</p>
 				<div class="services__gallery__block thumb">
 					<a data-fancybox="gallery" data-src="/main/assets/images/construction.png" rel="group" class="fancybox">
 					<img src="/main/assets/images/construction.png" alt="construction" class="img-fluid"></a>
+					<div class="services__gallery_description">
+						
+					<button class="arrow"><i class="fa fa-angle-right"></i></button>
+					<div class="description"><p>Строительство</p></div>
+					</div>
 				</div>
-					<button class="arrow"><i class="fas fa-angle-right"></i></button>
-					<p>Строительство</p>
 				<div class="services__gallery__block thumb">
 					<a data-fancybox="gallery" data-src="/main/assets/images/drilling.png" rel="group" class="fancybox">
 					<img src="/main/assets/images/drilling.png" alt="drilling" class="img-fluid"></a>
+					<div class="services__gallery_description">
+						
+					<button class="arrow"><i class="fa fa-angle-right"></i></button>
+					<div class="description"><p>ГНБ (горизонтально направленное бурение)</p></div>
+					</div>
 				</div>
-					<button class="arrow"><i class="fas fa-angle-right"></i></button>
-					<p>ГНБ (горизонтально направленное бурение)</p>
 			</div>
 			<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
 			<script src="/main/assets/plugins/jquery/jquery-3.6.0.js"></script>
 		</section>
-		<section id="advantages">
+		<section class="advantages">
 			<h1>Преимущества</h1>
-			<div class="swiper-container">
-				<div class="swiper-button-prev"></div>
-				<div class="swiper-button-next"></div>
+			<div class="swiper">
+				<div class="swiper-button-next"><i class="fa fa-angle-right"></i></div>
+				<div class="swiper-button-prev"><i class="fa fa-angle-left"></i></div>
 				<div class="swiper-wrapper">
 					<div class="swiper-slide">
 						<img src="/main/assets/images/stability.png" alt="stability">
-						<p>Стабильность компании</p>
+						<div class="slide__text"><p>Стабильность компании</p></div>
 					</div>
 					<div class="swiper-slide">
 						<img src="/main/assets/images/partners.png" alt="partners">
-						<p>Партнёрские отношения с крупными производителями</p>
+						<div class="slide__text"><p>Партнёрские отношения с крупными производителями</p></div>
 					</div>
 					<div class="swiper-slide">
 						<img src="/main/assets/images/experience.png" alt="experience">
-						<p>Большой опыт работы</p>
+						<div class="slide__text"><p>Большой опыт работы</p></div>
 					</div>
 				</div>
 			</div>
 		</section>
 		<section class="completedwork">
 			<h1>Выполненные работы</h1>
-			<div class="block"> <!--Флекс-контейнер-->
-				<div class="block__side"> <!--Флекс-элемент-->
-					<div class="block__body"> <!--Флекс-контейнер-->
-				<div class="swiper-button-prev"></div>
-				<div class="swiper-button-next"></div>
-						<div class="image-slider swiper-container">
-				<div class="image-slider__wrapper swiper-wrapper">
-					<div class="image-slider__slide swiper-slide">
-						<div class="image-slider__image">
-							<img src="/main/assets/images/img1.png" alt="img1">
+			<div class="swiper"> <!--Флекс-контейнер-->
+				<div class="swiper-button-next"><i class="fa fa-angle-right"></i></div>
+				<div class="swiper-button-prev"><i class="fa fa-angle-left"></i></div>
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+							<img src="/main/assets/images/img1.png" alt="img1" class="img1">
+							<div class="swiper__description">Стабильность компании</div>
 						</div>
-					</div>
-					<div class="image-slider__slide swiper-slide">
-						<div class="image-slider__image">
-							<img src="/main/assets/images/img2.png" alt="img2">
+						<div class="swiper-slide">
+							<img src="/main/assets/images/img2.png" alt="img2" class="img2">
+							<div class="swiper__description">Стабильность компании</div>
 						</div>
-					</div>
-					<div class="image-slider__slide swiper-slide">
-						<div class="image-slider__image">
-							<img src="/main/assets/images/img3.png" alt="img3">
+						<div class="swiper-slide">
+							<img src="/main/assets/images/img3.png" alt="img3" class="img3">
+							<div class="swiper__description">Стабильность компании</div>
 						</div>
-					</div>
-					<div class="image-slider__slide swiper-slide">
-						<div class="image-slider__image">
-							<img src="/main/assets/images/img4.png" alt="img4">
+						<div class="swiper-slide">
+							<img src="/main/assets/images/img4.png" alt="img4" class="img4">
+							<div class="swiper__description">Стабильность компании</div>
 						</div>
-					</div>
-				</div>
-			</div>
-					</div>
 				</div>
 			</div>
 			<script src="/main/assets/js/swiper.js"></script>
 		</section>
-		<section id="admissioncertificates">
+		<section class="admissioncertificates">
 			<h1>Свидетельства о допуске</h1>
-
+			<div class="swiper">
+				<div class="swiper-button-next"><i class="fa fa-angle-right"></i></div>
+				<div class="swiper-button-prev"><i class="fa fa-angle-left"></i></div>
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<img src="/main/assets/images/certificate.png" alt="certificate" class="certificate">
+					</div>
+					<div class="swiper-slide">
+						<img src="/main/assets/images/certificate.png" alt="certificate" class="certificate">
+					</div>
+					<div class="swiper-slide">
+						<img src="/main/assets/images/certificate.png" alt="certificate" class="certificate">
+					</div>
+					<div class="swiper-slide">
+						<img src="/main/assets/images/certificate.png" alt="certificate" class="certificate">
+					</div>
+					<div class="swiper-slide">
+						<img src="/main/assets/images/certificate.png" alt="certificate" class="certificate">
+					</div>
+					<div class="swiper-slide">
+						<img src="/main/assets/images/certificate.png" alt="certificate" class="certificate">
+					</div>
+				</div>
+			</div>
+			<a href="#">Подробнее</a>
 		</section>
-		<section id="ceotexts">
-			<div id="ceotexts__block">
+		<section class="ceotexts">
+			<div class="ceotexts__block">
 				<h1>CEO Тексты</h1>
-				<p id="ceotexts__block__shadow">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<span></span></p>
+				<p class="ceotexts__block__shadow">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<span></span></p>
 			</div>
 		</section>
-			<script src="/main/assets/js/swiper.js"></script>
-			<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
-	</main>
-	<footer>
+		<script>
+			const swiper = new Swiper('.swiper', {
+			  // Optional parameters
+			  direction: 'horizontal',
+			  loop: true,
+
+			  // Navigation arrows
+			  navigation: {
+			    nextEl: '.swiper-button-next',
+			    prevEl: '.swiper-button-prev',
+			  },
+
+			});
+			const swiper = document.querySelector('.swiper').swiper;
+			swiper.slideNext();
+		</script>
+		</div>
 		
+	</main>
+	<footer class="footer">
+		<div class="footer__block1">
+			<h1>Техспецстрой</h1>
+			<div class="contacts">
+				<a href="#">tss.inc@yandex.ru</a>
+				<div class="phone">
+					<p class="contact">+7 (4212)  </p>
+					<p class="contact__sub">60-15-28, 46-78-02</p>
+				</div>
+			</div>
+		</div>
+		<div class="footer__block2">
+			<div class="footer__menu">
+				<a href="#">О компании</a>
+				<a href="#">Услуги</a>
+				<a href="#">Наши работы</a>
+				<a href="#">Контакты</a>
+				<a href="#">Разрешительные документы</a>
+			</div>
+			<div class="footer__links">
+				<a href="#"><i class="fa fa-vk"></i></a>
+				<a href="#"><i class="fa fa-facebook-f"></i></a>
+				<a href="#"><i class="fa fa-instagram"></i></a>
+			</div>
+		</div>
+		<div class="footer__block3">
+			<div class="footer__text">
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+			</div>
+			<div class="footer__perfomance">
+				<a href="#">Создание и продвижение сайтов  </a>
+				<p> &ndash; Перфоманс</p>
+				<img src="/main/assets/images/perfomance_logo.png" alt="logo">
+			</div>
+		</div>
 	</footer>
 </body>
 </html>
