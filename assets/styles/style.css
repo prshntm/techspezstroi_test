@@ -217,6 +217,7 @@ h1 {
 }
 .header #callback {
   font-size: 12px;
+  margin-top: 50px;
 }
 main {
   overflow-x: hidden;
@@ -283,6 +284,9 @@ main section .swiper .swiper-button-next:hover {
 main section .swiper .certificate {
   width: 160px;
   height: 230px;
+}
+main section .swiper-description {
+  font-family: "Avenir Next Cyr";
 }
 main section .slide__text {
   text-align: center;
